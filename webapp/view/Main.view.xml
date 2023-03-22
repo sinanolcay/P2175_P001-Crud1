@@ -1,0 +1,54 @@
+<mvc:View controllerName="P2175_P001.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>Crud}">
+				<content>
+					<Label text="ID"></Label>
+					<input value="{/myid}"></input>
+					<Label text="AD"></Label>
+					<input value="{/myad}"/>
+					<Label text="SOYAD"></Label>
+					<input value="{/mysoyad}"></input>
+					<Label text="EMAIL"></Label>
+					<input value="{/myemail}"></input>
+				
+					
+					<Button type="Accept" text="ekle" press="onpress"></Button>
+					
+					<Table mode="MultiSelect" id="idStudentTable" items="{/datas}">
+						
+						<columns>
+							<Column>
+								<Text text="ID"/>
+							</Column>
+							<Column>
+								<Text text="AD"/>
+							</Column>
+							<Column>
+								<Text text="SOYAD"/>
+							</Column>
+							<Column>
+								<Text text="EMAIL"/>
+							</Column>
+						</columns>
+						
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{id}"/>
+									<Text text="{ad}"/>
+									<Text text="{soyad}"/>
+									<Text text="{email}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						
+					</Table>
+					
+					<Button type="Reject" text="sil" press="onDeletepress"></Button>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
